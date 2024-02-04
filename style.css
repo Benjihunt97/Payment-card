@@ -1,0 +1,84 @@
+/* Grid layout for header */
+.header {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+/* Styling for menu SVG icons */
+.menu svg:not(:nth-child(3)) {
+  height: 26px;
+  width: 26px;
+}
+
+/* Styling for active list item */
+.active-list-item {
+  top: -2rem !important;
+}
+
+.active-list-item:hover {
+  background: #fff !important;
+  border: 2px solid #f87171 !important;
+}
+
+.active-list-item:hover > svg {
+  stroke: #f87171 !important;
+}
+
+/* Styling for menu list items */
+.menu li {
+  position: relative;
+  transition: all .3s linear;
+  border: 2px solid transparent;
+}
+
+.menu li:hover {
+  background: #f87171;
+  color: #fff;
+}
+
+.menu li:hover svg {
+  stroke: #fff;
+}
+
+/* Styling for user menu */
+.user-menu {
+  transition: all .3s linear;
+  width: 0;
+  overflow: hidden;
+}
+
+.toggle-user-menu {
+  width: 120px;
+}
+
+.toggle-user-btn {
+  left: 90%;
+}
+
+/* Styling for user profiles */
+.user-profiles {
+  transition: all .5s linear;
+}
+
+/* Styling for full-width images */
+.image-full {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Media query for larger screens */
+@media (min-width: 395px) {
+  body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+
+  .app {
+    max-height: 900px;
+    max-width: 700px;
+    border-radius: .75rem;
+    border: 2px solid #f87171;
+  }
+}
